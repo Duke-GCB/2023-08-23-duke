@@ -20,6 +20,17 @@
       <a href="{{ site.swc_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/swc-icon-blue.svg %}" alt="Software Carpentry logo" />
       </a>
+      {% elsif site.curriculum == "dc-upgg" %}
+      <a href="https://genome.duke.edu" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/gcb-logo.png" alt="Duke GCB logo" />
+      </a>
+      {% comment %} The logo is a hack to accomodate the decision to change logo from Data Carpentry to The Carpentries. {% endcomment %}
+      <a href="{{ site.carpentries_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/cp-logo-blue.svg" alt="The Carpentries logo" />
+      </a>
+      <a href="https://github.com/Reproducible-Science-Curriculum" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/reproLogo.png" alt="Reproducible Science Curriculum logo" />
+      </a>
       {% elsif site.carpentry == "dc" %}
       <a href="{{ site.dc_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/dc-icon-black.svg %}" alt="Data Carpentry logo" />

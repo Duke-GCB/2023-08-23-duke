@@ -80,6 +80,29 @@ Social sciences workshops
 {% include warning-flavor.html %}
 {% endif %}
 
+
+{% comment %}
+Geospatial workshops
+{% endcomment %}
+
+{% elsif site.curriculum == "dc-geospatial" %}
+<p>The setup instructions for the Data Carpentry Geospatial workshop can be found at <a href="https://datacarpentry.org/geospatial-workshop/setup.html">the workshop overview site</a>.</p>
+
+{% elsif site.curriculum == "dc-upgg" %}
+
+{% include install_instructions/shell.html %}
+{% include install_instructions/git.html %}
+{% include install_instructions/editor.html %}
+
+{% if site.flavor == "r" %}
+{% include install_instructions/r.html %}
+{% elsif site.flavor == "python" %}
+{% include install_instructions/python.html %}
+
+{% else %}
+{% include warning-flavor.html %}
+{% endif %}
+
 {% else %}
 {% include warning-curriculum.html %}
 {% endif %}
